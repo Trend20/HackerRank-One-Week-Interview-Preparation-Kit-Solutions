@@ -8,8 +8,26 @@ The minimum sum is: 1 + 3 + 5 + 7 =16 and the maximum sum is: 3 + 5 + 7 + 9 = 24
  */
 
 let myTestArr = [1, 3, 5, 7, 9];
-function minMaxSum(arr){
 
-  arr.sort();
-  
+function minMaxSum(arr){
+  let sortedArr = arr.sort();
+  let minSum = 0;
+  let maxSum = 0;
+
+  let minArr = sortedArr.slice(0, sortedArr.length -1);
+  let maxArr = sortedArr.slice(1);
+
+  for(let i = 0; i< minArr.length; i++){
+    minSum += minArr[i]
+  }
+
+  for(let j = 0; j <maxArr.length; j++){
+    maxSum += maxArr[j]
+  }
+
+
+  console.log(minSum, maxSum);
+
 }
+
+minMaxSum(myTestArr);
