@@ -7,9 +7,8 @@
 function lonelyInteger(a) {
   // Write your code here
   let lonelyInt;
-
   for(let i = 0; i<a.length; i++){
-    if(a.filter((x) => x == a[i]).length == 1){
+    if(a.filter(x => x == a[i]).length == 1){
       lonelyInt = a[i]
     }
   }
